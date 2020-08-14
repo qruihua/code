@@ -56,6 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# 工程的总路由
 ROOT_URLCONF = 'bookmanager.urls'
 
 TEMPLATES = [

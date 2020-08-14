@@ -28,6 +28,9 @@ class BookInfo(models.Model):
     # CharField 对应数据库中的 varchar(M)
     name=models.CharField(max_length=10)
 
+    # 为了admin后台展示数据方便.不重写 显示	BookInfo object (2)
+    def __str__(self):
+        return self.name
 
 # 今天晚上把面向对象的内容 回顾一下
 class PeopleInfo(models.Model):

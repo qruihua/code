@@ -59,10 +59,14 @@ MIDDLEWARE = [
 # 工程的总路由
 ROOT_URLCONF = 'bookmanager.urls'
 
+# 和模板相关的配置
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # 告知系统 模板路径在哪里
+        # os.path.join 拼接路径
+        # BASE_DIR  明天讲解到底是哪里
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 我先不注册,先埋个雷
     # 方式1  子应用的名字
-    # 'book',
+    'book',
     # 方式2
     # 'book.apps.BookConfig'
 ]
@@ -79,6 +79,10 @@ WSGI_APPLICATION = 'bookmanager.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+
+# sqlite3 也是一个关系型数据
+# 我们当前只是一个过渡方案
+# 明天会配置为mysql
 
 DATABASES = {
     'default': {

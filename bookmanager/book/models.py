@@ -37,7 +37,15 @@ class PeopleInfo(models.Model):
     # 主表数据删除,on_delete=models.CASCADE 从表数据也跟着删除
     book=models.ForeignKey(BookInfo,on_delete=models.CASCADE)
 
-
+"""
+1.定义类 (定义了类,但是不会自动创建表)
+2.我们需要迁移
+    2.1 先生成迁移文件
+        python manage.py makemigrations
+    2.2 执行迁移文件 -- 就创建了数据表
+        python manage.py migrate
+3.
+"""
 
 
 

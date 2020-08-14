@@ -29,7 +29,9 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+# python manage.py startapp 子应用名
 
+# 安装子应用 (注册子应用)
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 我先不注册,先埋个雷
+    # 方式1  子应用的名字
+    # 'book',
+    # 方式2
+    # 'book.apps.BookConfig'
 ]
 
 MIDDLEWARE = [

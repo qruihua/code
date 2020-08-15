@@ -74,11 +74,16 @@ WSGI_APPLICATION = 'bookmanager02.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+# sqlite3 小型的数据库 一般应用于 移动端
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST':'127.0.0.1',         # 我们连接MySQL的 IP 也可以写 localhost
+        'PORT':'3306',              # 端口号
+        'USER':'root',              # 用户名
+        'PASSWORD':'mysql',         # 密码
+        'NAME': 'book_40_01',       #指明数据库
     }
 }
 

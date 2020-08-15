@@ -186,6 +186,21 @@ BookInfo.objects.exclude(id=3)
 
 
 
+#################聚合函数###############################
+# Max,Min,Count,Avg,Sum
+"""
+聚合函数需要使用 模型类名.objects.aggregate(Xxx('字段名'))
+"""
+
+from django.db.models import Max,Min,Count,Avg,Sum
+# 统计所有书籍的阅读量
+BookInfo.objects.aggregate(Sum('readcount'))
+
+
+# 排序
+# 默认是升序
+# 如何降序呢? 字段前边添加一个 -
+BookInfo.objects.all().order_by('-readcount')
 
 
 

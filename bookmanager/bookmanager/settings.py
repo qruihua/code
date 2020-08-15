@@ -14,7 +14,13 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+#os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#__file__
+# print(__file__)
+# /home/ubuntu/Desktop/40/code/bookmanager/bookmanager/settings.py
+# os.path.abspath(__file__)
+# dirname 目录
+# /home/ubuntu/Desktop/40/code/bookmanager/
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -23,9 +29,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qkgwa-j2_7syo&e$$*!6_@-_&0mjt5$n-q24gw!0o65q8vb*#o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# 调试
+#我们在开发的时候 是需要设置debug=True
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#当我们不进行调试的时候，需要设置　允许我们以什么方式来访问
+# 我们想在浏览器中　以　１２７．０．０．１：８０００的形式访问．把ＩＰ地址或者域名　添加进来
+ALLOWED_HOSTS = ['127.0.0.1']
+
+# ALLOWED_HOSTS = ['*']   * 以ip 域名都可以 不建议使用
 
 
 # Application definition
@@ -121,7 +133,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'zh-Hans'#'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'#'UTC'
 
 USE_I18N = True
 
@@ -133,4 +145,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+# 访问静态资源是不需要单独在 urls中添加路由的
+# 我们是通过 ip:port/STATIC_URL + 文件路径
+STATIC_URL = '/ooooo/'
+
+# 告知系统我们的静态资源在哪里
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'static')
+]

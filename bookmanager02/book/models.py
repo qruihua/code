@@ -39,8 +39,42 @@ class BookInfo(models.Model):
     #是否删除
     is_delete=models.BooleanField(default=False)
 
+    # 先记住书写形式
     class Meta:
         db_table='bookinfo'         # 修改表明
         verbose_name='Admin站点里显示'
 
+# 只要模型有改变,我们就要生成迁移文件,然后执行迁移
+class PeopleInfo(models.Model):
 
+    # 枚举类型
+    GENDER_CHOICE=(
+        (0,'male'),
+        (1,'female')
+    )
+
+    name=models.CharField(max_length=20)
+    #性别
+    gender=models.SmallIntegerField(choices=GENDER_CHOICE,default=0)
+    #描述
+    description=models.CharField(max_length=100)
+    #是否删除
+    is_delete=models.BooleanField(default=False)
+    # 外键
+    book=models.ForeignKey(BookInfo,on_delete=models.CASCADE)
+
+    class Meta:
+        db_table='peopleinfo'
+"""
+黑帮老大    1           入狱--判处枪决
+
+黑帮小弟    n       ①劫狱不让老大死  ② 不管 老大死就死   ③ 小弟跟着死
+
+
+书籍      1
+
+人物      n
+    书籍的外键
+
+西游记  -- 孙悟空 猪八戒 唐僧
+"""

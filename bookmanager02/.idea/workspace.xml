@@ -27,8 +27,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/book/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="25" />
+            <state relative-caret-position="175">
+              <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/book/migrations/0002_peopleinfo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="14" column="24" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -77,6 +86,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>meta</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -195,12 +209,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597457452744</updated>
-      <workItem from="1597457454544" duration="3063000" />
+      <workItem from="1597457454544" duration="4973000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3063000" />
+    <option name="totallyTimeSpent" value="4973000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="25" width="1311" height="645" extended-state="6" />
@@ -277,10 +291,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/py3_django_40/lib/python3.6/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="398" column="16" selection-start-line="398" selection-start-column="12" selection-end-line="398" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/migrations/0002_peopleinfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/book/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="25" />
+        <state relative-caret-position="175">
+          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
         </state>
       </provider>
     </entry>

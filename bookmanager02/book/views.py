@@ -77,11 +77,21 @@ book.delete()
 # 方式2
 BookInfo.objects.filter(id=5).delete()
 
+##########################查询###################################
 
+# get  查询单一结果 就是一个或者没有.没有的化会报异常
+# select * from bookinfo where id=1
+book=BookInfo.objects.get(id=1)
+# 模型类名.objects.get(字段名=值)
+# 字段名 是我们的是属性就可以.只不过用id用的多
+book=BookInfo.objects.get(name='天龙八部')
 
-
-
-
+# 所有的结果
+BookInfo.objects.all()
+# 查询结果集 -- 实际就是一个列表
+# <QuerySet [<BookInfo: 射雕英雄传>, <BookInfo: 天龙八部>, <BookInfo: 笑傲江湖>, <BookInfo: 雪山飞狐>]>
+from book.models import PeopleInfo
+PeopleInfo.objects.all().count()
 # class Person(object):
 #     name=''
 #     age=10

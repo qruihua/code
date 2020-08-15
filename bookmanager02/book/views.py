@@ -92,6 +92,69 @@ BookInfo.objects.all()
 # <QuerySet [<BookInfo: 射雕英雄传>, <BookInfo: 天龙八部>, <BookInfo: 笑傲江湖>, <BookInfo: 雪山飞狐>]>
 from book.models import PeopleInfo
 PeopleInfo.objects.all().count()
+
+
+
+#############################################################
+"""
+模型类名.objects.filter/exclude/get()
+
+filter过滤出多个结果(0,1,n个) []
+get过滤单一结果
+exclude排除掉符合条件剩下的结果 (相当于not)
+
+语法形式是一样的(以filter为例):
+    filter(属性__运算符=值)   特别强调: 2个下划线
+    
+"""
+
+# 查询编号为1的图书
+# exact 是等于
+BookInfo.objects.get(id__exact=1)
+# 一般 等于我们就直接写
+BookInfo.objects.get(id=1)
+
+BookInfo.objects.filter(id__exact=1)
+BookInfo.objects.filter(id=1)
+
+# 结果对比区别
+BookInfo.objects.get(id=1)
+BookInfo.objects.filter(id=1)
+
+# 查询书名包含'湖'的图书
+BookInfo.objects.filter(name__contains='湖')
+# 查询书名以'部'结尾的图书
+BookInfo.objects.filter(name__endswith='部')
+# 查询书名为空的图书
+# select * from bookinfo where name is null
+BookInfo.objects.filter(name__isnull=True)
+# 查询编号为1或3或5的图书
+# select * from bookinfo where id=1 or id=3 or id=5
+# select * from bookinfo where id in (1,3,5)
+BookInfo.objects.filter(id__in=[1,3,5])
+# 查询编号大于3的图书
+# gt 大于         great
+# gte 大于等于     equal
+# lt 小于         less then litte
+# lte 小于等于
+BookInfo.objects.filter(id__gt=3)
+# 查询1980年发表的图书
+BookInfo.objects.filter(pub_date__year=1980)
+# 查询1990年1月1日后发表的图书
+
+BookInfo.objects.filter(pub_date__gt='1990-1-1')
+
+
+
+
+
+
+
+
+
+
+
+
 # class Person(object):
 #     name=''
 #     age=10

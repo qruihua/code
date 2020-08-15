@@ -62,6 +62,20 @@ BookInfo.objects.filter(id=6).update(name='爬虫',
 
 
 
+####################删除数据###################################
+
+# 方式1
+# 1. 先查询出某一个对象
+# select * from bookinfo where id=6
+book=BookInfo.objects.get(id=6)
+# 物理删除
+book.delete()
+
+# 物理删除  -- 从数据库中把数据直接删除
+# 逻辑删除  -- 修改一个标记位.数据没有真正删除.
+
+# 方式2
+BookInfo.objects.filter(id=5).delete()
 
 
 

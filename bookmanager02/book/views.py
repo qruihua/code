@@ -41,6 +41,33 @@ book=BookInfo.objects.create(
     commentcount=999
 )
 
+#######################修改数据##################################
+
+# 方式1
+# 1. 先查询出某一个对象
+# select * from bookinfo where id=6
+book=BookInfo.objects.get(id=6)
+# 2.调用对象的属性来赋值
+book.name='Flask'
+book.readcount=1000
+# 3. 调用save方法
+book.save()
+
+# 方式2
+# select * from bookinfo where id=6
+BookInfo.objects.filter(id=6).update(name='爬虫',
+                                     readcount=789,
+                                     commentcount=123,
+                                     pub_date='2010-1-1')
+
+
+
+
+
+
+
+
+
 # class Person(object):
 #     name=''
 #     age=10

@@ -44,6 +44,10 @@ class BookInfo(models.Model):
         db_table='bookinfo'         # 修改表明
         verbose_name='Admin站点里显示'
 
+
+    def __str__(self):
+        return self.name
+
 # 只要模型有改变,我们就要生成迁移文件,然后执行迁移
 class PeopleInfo(models.Model):
 
@@ -65,6 +69,9 @@ class PeopleInfo(models.Model):
 
     class Meta:
         db_table='peopleinfo'
+
+    def __str__(self):
+        return self.name
 """
 黑帮老大    1           入狱--判处枪决
 

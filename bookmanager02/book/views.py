@@ -146,6 +146,44 @@ BookInfo.objects.filter(pub_date__gt='1990-1-1')
 
 
 
+#################F对象##################################
+"""
+之前的查询都是对象的属性与常量值比较，两个属性怎么比较呢？ 
+答：使用F对象，被定义在django.db.models中。
+
+查询阅读量大于等于评论量的图书。
+
+filter(字段__运算符=F('字段值'))
+
+"""
+from django.db.models import F
+
+BookInfo.objects.filter(readcount__gte=F('commentcount'))
+
+
+##################Q对象##########################
+
+# 查询阅读量大于20，并且编号小于3的图书
+
+
+BookInfo.objects.filter(readcount__gt=20).filter(id__lt=3)
+
+BookInfo.objects.filter(readcount__gt=20,id__lt=3)
+
+# filter(Q()&Q()) 并且
+# filter(Q(字段__运算符=值)|Q(字段__运算符=值)) 或者
+
+# 查询阅读量大于20，或者 编号小于3的图书
+from django.db.models import Q
+BookInfo.objects.filter(Q(readcount__gt=20)|Q(id__lt=3))
+
+
+# ~Q 非 not
+# 查询id不为3
+BookInfo.objects.filter(~Q(id=3))
+BookInfo.objects.exclude(id=3)
+
+
 
 
 

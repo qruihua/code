@@ -203,6 +203,18 @@ BookInfo.objects.aggregate(Sum('readcount'))
 BookInfo.objects.all().order_by('-readcount')
 
 
+##################书籍和人物表###############################
+
+# 查询书籍为1的所有人物信息
+book=BookInfo.objects.get(id=1)
+book.peopleinfo_set.all()
+
+# 查询人物为1的书籍信息
+person=PeopleInfo.objects.get(id=1)
+person.book.name
+person.book.readcount
+
+
 
 
 

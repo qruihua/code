@@ -38,7 +38,10 @@ class BookInfo(models.Model):
     commentcount=models.IntegerField(default=0)
     #是否删除
     is_delete=models.BooleanField(default=False)
-
+    # 当我们在人物的模型中,定义了外键之后, 系统会自动的为当前
+    # 外键的模型添加一个 属性
+    # 关联模型小写_set
+    #  peopleinfo_set = [PeopleInfo,PeopleInfo,....]
     # 先记住书写形式
     class Meta:
         db_table='bookinfo'         # 修改表明

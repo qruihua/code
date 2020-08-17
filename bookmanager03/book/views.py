@@ -108,7 +108,22 @@ def login_json(request):
 
 
 
+def header(request):
 
+    # 获取请求头的数据
+    print(request.META)
+    """
+    {'PATH': '/home/ubuntu/.virtualenvs/py3_django_40/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/rabbitmq/sbin', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'XMODIFIERS': '@im=fcitx', 
+    'LC_TELEPHONE': 'zh_CN.UTF-8', 
+    'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share:/usr/share:/var/lib/snapd/desktop',
+     'GDMSESSION': 'ubuntu', 
+     'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 
+     'LC_TIME': 'zh_CN.UTF-8', 'PAPERSIZE': 'a4', 'TEXTDOMAINDIR': '/usr/share/locale/', 'GTK_IM_MODULE': 'fcitx', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'PS1': '(py3_django_40) ', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'SSH_AGENT_PID': '2161', 'QT4_IM_MODULE': 'fcitx', 'LC_PAPER': 'zh_CN.UTF-8', 'SESSION_MANAGER': 'local/python:@/tmp/.ICE-unix/2070,unix/python:/tmp/.ICE-unix/2070', 'USERNAME': 'ubuntu', 'LOGNAME': 'ubuntu', 'PWD': '/home/ubuntu/Desktop/40/code/bookmanager03', 'IM_CONFIG_PHASE': '2', 'PYCHARM_HOSTED': '1', 'LANGUAGE': 'zh_CN', 'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'PYTHONPATH': '/home/ubuntu/Desktop/40/code/bookmanager03:/home/ubuntu/software/pycharm-2019.1.3/helpers/pycharm_matplotlib_backend:/home/ubuntu/software/pycharm-2019.1.3/helpers/pycharm_display', 'SHELL': '/bin/bash', 'LC_ADDRESS': 'zh_CN.UTF-8', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/pycharm.desktop', 'OLDPWD': '/home/ubuntu/software/pycharm-2019.1.3/bin', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'GTK_MODULES': 'gail:atk-bridge', 'VIRTUAL_ENV': '/home/ubuntu/.virtualenvs/py3_django_40', 'CLUTTER_IM_MODULE': 'xim', 'TEXTDOMAIN': 'im-config', 'XDG_SESSION_DESKTOP': 'ubuntu', 'SHLVL': '0', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'LC_MONETARY': 'zh_CN.UTF-8', 'QT_IM_MODULE': 'fcitx', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'LANG': 'zh_CN.UTF-8', 'XDG_SESSION_ID': '2', 'XDG_SESSION_TYPE': 'x11', 'DISPLAY': ':0', 'LC_NAME': 'zh_CN.UTF-8', 'PYCHARM_DISPLAY_PORT': '42981', 'PYTHONIOENCODING': 'UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'DESKTOP_SESSION': 'ubuntu', 'USER': 'ubuntu', 'XDG_MENU_PREFIX': 'gnome-', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '88808', 'QT_ACCESSIBILITY': '1', 'WINDOWPATH': '2', 'LC_NUMERIC': 'zh_CN.UTF-8', 'GJS_DEBUG_OUTPUT': 'stderr', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_SEAT': 'seat0', 'DJANGO_SETTINGS_MODULE': 'bookmanager03.settings', 'PYTHONUNBUFFERED': '1', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'XDG_VTNR': '2', 'XDG_RUNTIME_DIR': '/run/user/1000', 'HOME': '/home/ubuntu', 'TZ': 'UTC', 'RUN_MAIN': 'true', 'SERVER_NAME': 'localhost', 'GATEWAY_INTERFACE': 'CGI/1.1', 'SERVER_PORT': '8000', 'REMOTE_HOST': '', 'CONTENT_LENGTH': '', 'SCRIPT_NAME': '', 'SERVER_PROTOCOL': 'HTTP/1.1', 'SERVER_SOFTWARE': 'WSGIServer/0.2', 'REQUEST_METHOD': 'GET', 'PATH_INFO': '/header/', 'QUERY_STRING': '', 'REMOTE_ADDR': '127.0.0.1', 'CONTENT_TYPE': 'text/plain', 'HTTP_USER_AGENT': 'PostmanRuntime/7.13.0', 'HTTP_ACCEPT': '*/*', 'HTTP_CACHE_CONTROL': 'no-cache', 'HTTP_POSTMAN_TOKEN': '42f16f3b-5c5e-4c9f-b8bc-979835ebb826', 'HTTP_HOST': '127.0.0.1:8000', 'HTTP_ACCEPT_ENCODING': 'gzip, deflate', 'HTTP_CONNECTION': 'keep-alive', 'wsgi.input': <django.core.handlers.wsgi.LimitedStream object at 0x7f6414dc5a90>, 'wsgi.errors': <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>, 'wsgi.version': (1, 0), 'wsgi.run_once': False, 'wsgi.url_scheme': 'http', 'wsgi.multithread': True, 'wsgi.multiprocess': False, 'wsgi.file_wrapper': <class 'wsgiref.util.FileWrapper'>}
+
+    """
+    http_itcast=request.META['HTTP_ITCAST']
+    print(http_itcast)
+    return HttpResponse('header')
 
 
 

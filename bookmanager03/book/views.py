@@ -1,12 +1,24 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+
+from django.http import HttpRequest
+
 # Create your views here.
 def index(request):
 
-    score=100
-    #
-    books=BookInfo.objects.all()
+
+    ##############################################
+    """
+    http://ip:port/path1/path2/?key1=value1&key2=value
+    我们的路经 是由 2部分组成  ? 是一个分割符
+    ?前边是 http://ip:port/path1/path2/        路由
+    ?后边是 key1=value1&key2=value             查询字符串
+    """
+
+    # score=100
+    # #
+    # books=BookInfo.objects.all()
     # 肯定得执行一次, 因为要把数据库的数据查询出来,放到缓存里
     # [book.id for book in books ]  使用缓存
     # [book.id for book in books ]  使用缓存
@@ -16,6 +28,38 @@ def index(request):
     # [book.id for book in BookInfo.objects.all()] #没有 用缓存
     # [book.id for book in BookInfo.objects.all()] #没有 用缓存
     return HttpResponse('ok ')
+
+
+"""
+http://127.0.0.1:8000/1/100/
+
+1/100/
+"""
+# def readbook(request,book_id):
+# def readbook(request,book_id,cat_id):
+def readbook(request,cat_id,book_id):
+
+    content='book_id {} ,cat_id ~~~~~ {}'.format(book_id,cat_id)
+
+    return HttpResponse(content)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 """
 缓存 的概念

@@ -56,6 +56,12 @@ def readbook(request,cat_id,book_id):
     return HttpResponse('ok')
 
 
+def login(request):
+
+    # form-data 数据 我们是通过 request.POST 来接收
+    print(request.POST)
+
+    return HttpResponse("login")
 
 
 

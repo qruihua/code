@@ -175,6 +175,13 @@ def jsonresponse(request):
     #
     # return HttpResponse(user_str)
 
+from django.shortcuts import redirect
+def to_index(request):
+
+    return redirect('/detail')
+    # redirect 重定向 如果跳转到其他网址页面 必须以http://开头
+    # return redirect('www.itcast.cn')  错误的!!!
+    return redirect('http://www.itcast.cn')
 
 """
 缓存 的概念

@@ -153,8 +153,27 @@ def detail(request):
 
     return response
 
+from django.http import JsonResponse
+def jsonresponse(request):
 
 
+    userinfo = {
+        'user_id':123,
+        'username':'itcast'
+    }
+    # data  传递的是字典
+    return JsonResponse(userinfo)
+
+    # userinfo = {
+    #     'user_id':123,
+    #     'username':'itcast'
+    # }
+    #
+    # # json.dumps 是将字段转换为字符串
+    # import json
+    # user_str=json.dumps(userinfo)
+    #
+    # return HttpResponse(user_str)
 
 
 """

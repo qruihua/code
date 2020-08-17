@@ -42,8 +42,14 @@ BookInfo.objects.filter(peopleinfo__description__contains='八')
 
 
 
+#  我们在查询多的数据的时候,条件为1的
+# 模型类名.objects.filter(外键__字段__运算符=值)
+# 查询书名为“天龙八部”的所有人物
 
-
+PeopleInfo.objects.filter(book__name='天龙八部')
+PeopleInfo.objects.filter(book__name__exact='天龙八部')
+# 查询图书阅读量大于30的所有人物
+PeopleInfo.objects.filter(book__readcount__gt=30)
 
 
 

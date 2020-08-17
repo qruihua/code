@@ -110,6 +110,14 @@ def login_json(request):
 
 def header(request):
 
+    print(request.method)
+    if request.method == 'GET':
+        print('GET')
+    elif request.method == 'POST':
+        print('POST')
+    else:
+        print(request.method)
+
     # 获取请求头的数据
     print(request.META)
     """
@@ -127,7 +135,23 @@ def header(request):
 
 
 
+def detail(request):
 
+    # content 不能是对象
+    # content 就是响应体的数据
+
+    # content_type 响应数据的类型
+    # MIME 类型
+    # 语法格式: 大类/小类
+    # text/html  application/json
+
+    # status 响应状态码
+    # 200 表示成功
+    response = HttpResponse(content='内容',content_type='text/html',status=200)
+    #设置响应头的数据
+    response['itcast']='aaaaa'
+
+    return response
 
 
 

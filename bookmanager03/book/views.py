@@ -39,9 +39,21 @@ http://127.0.0.1:8000/1/100/
 # def readbook(request,book_id,cat_id):
 def readbook(request,cat_id,book_id):
 
-    content='book_id {} ,cat_id ~~~~~ {}'.format(book_id,cat_id)
+    # content='book_id {} ,cat_id ~~~~~ {}'.format(book_id,cat_id)
 
-    return HttpResponse(content)
+    #################GET########################
+    print(request.GET)
+    #<QueryDict: {'keyword': ['abc']}>
+    # Dict  -- 字典
+    # request.GET 获取 查询字符串
+    # request.GET.get 获取字典数据
+    # keyword=request.GET.get('keyword')
+    # print(keyword)
+    # BookInfo.objects.filter(name__contains=keyworks)
+
+    keyword=request.GET.getlist('keyword')
+    print(keyword)
+    return HttpResponse('ok')
 
 
 

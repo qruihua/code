@@ -64,8 +64,47 @@ def login(request):
     return HttpResponse("login")
 
 
+"""
+只是和python的字典很像
+{
+    "key":value,
+    "girl-firends":["Tom","Rose"]
+}
 
 
+{
+"code":0,
+"whwswswws":"iIIh6i 8s1UjYQvkpfogpQg==",
+"openall":1,
+"openalltouch":1,
+"processtype":1
+}
+"""
+
+def login_json(request):
+
+    # 接收非表单数据 用 request.body
+    # 1.接收数据
+    body=request.body
+    # print(body)
+    # b'{\n\t"username":"itcast",\n\t"password":"123"\n}'
+
+    # 2. 对bytes数据进行解码
+    #
+    body_str = body.decode()
+    """
+    body.decode() 数据是  JSON形式的字符串 --- 字符串
+    {
+        "username":"itcast",
+        "password":"123"
+    }
+    """
+    # 3. 将 JSON形式的字符串 转换为字典
+    import json
+    body_dict = json.loads(body_str)
+    # body_dict 就是字典了
+    print(body_dict)
+    return HttpResponse('json')
 
 
 

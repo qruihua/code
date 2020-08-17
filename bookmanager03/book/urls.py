@@ -1,5 +1,5 @@
 from django.urls import path
-from book.views import index,readbook,login
+from book.views import index,readbook,login,login_json
 urlpatterns = [
     path('index/',index),
     #http://127.0.0.1:8000/1/100/
@@ -10,4 +10,5 @@ urlpatterns = [
     path('<cat_id>/<book_id>/',readbook),
     # 模拟登录
     path('login/',login),
+    path('login_json/',login_json),
 ]

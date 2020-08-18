@@ -283,6 +283,23 @@ def tieba_login(request):
     response = HttpResponse('set_cookie')
 
     # 1.设置cookie 是调用 response 实例对象的 set_cookie 方法
-    response.set_cookie(key='username', value=username)
+    # max_age= 设置cookie的有效期
+    # 秒数 返回响应开始,之后max_age秒过期
+    response.set_cookie(key='username', value=username,max_age=10000)
+    response.set_cookie(key='user_id', value='123')
+    response.set_cookie(key='phono', value='http://www.baidu.com')
 
+    # 删除cookie 删除cookie的本质是设置max_age = 0
+    # response.delete_cookie()
     return response
+
+
+def get_cookie(request):
+
+    print(request.COOKIES)
+    username=request.COOKIES.get('username')
+
+    # user=User.ojects.get
+    # {'user_id': '123', 'phono': 'http://www.baidu.com'}
+    # 字典数据
+    return HttpResponse(username)

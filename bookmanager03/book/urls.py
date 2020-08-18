@@ -51,6 +51,7 @@ urlpatterns = [
 
 
     path('login/',views.tieba_login),
+    path('get_cookie/',views.get_cookie),
 
 
 ]

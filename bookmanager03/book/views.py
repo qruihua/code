@@ -391,6 +391,37 @@ class RegisterView(View):
 
 
 
+# class Person:
+
+# class Person(object):
+#
+#     #属性
+#     name=''
+#     age=0
+#
+#     #方法 -- 实例方法,对象方法
+#     def eat(self):
+#         print('eat')
+#
+#     # 静态方法
+#     @staticmethod
+#     def play():
+#         print('static')
+#
+#
+#     @classmethod
+#     def learn(cls):
+#         print('classmethod')
+#
+#
+# p = Person()
+# # p 实例对象
+# p.eat()
+# #静态方法
+# Person.play()
+# #类方法
+# Person.learn()
+
 
 
 

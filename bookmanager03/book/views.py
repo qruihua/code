@@ -387,7 +387,35 @@ class RegisterView(View):
 
         return HttpResponse('view post')
 
+"""
 
+定义一个 个人中心页面
+个人中心 肯定是登录用户才可以访问
+"""
+
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+"""
+LoginRequiredMixin 最终是继承自 object 
+但是它实现了 验证用户是否登录的功能
+如果用户没有登录 ,会跳转到系统的 accounts/login 路由里
+
+View  视图
+
+"""
+
+class CenterView(LoginRequiredMixin,View):
+# class CenterView(View):
+
+    def get(self,request):
+
+        return HttpResponse('个人中心 get')
+
+
+    def post(self,request):
+
+
+        return HttpResponse('个人中心 post')
 
 
 

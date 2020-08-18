@@ -64,4 +64,8 @@ urlpatterns = [
     # path 的参数1  路由
     # path 的参数2  视图函数名
     path('meiduo_register/',views.RegisterView.as_view()),
+
+
+    # 个人中心路由
+    path('center/',views.CenterView.as_view()),
 ]

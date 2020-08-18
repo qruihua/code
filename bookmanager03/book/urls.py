@@ -43,10 +43,14 @@ urlpatterns = [
     # path('to_index/',to_index),
 
     ################
+    # register/13312341234/
     # tieba_id 期望是整形!!!
     # 怎么约束数据呢???
     # path('p/<int:tieba_id>/',views.baidu_tieba),
     path('register/<mobile:phone>/',views.tieba_register),
+
+
+    path('login/',views.tieba_login),
 
 
 ]

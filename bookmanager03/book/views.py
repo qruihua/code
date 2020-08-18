@@ -259,3 +259,30 @@ def tieba_register(request,phone):
 
 
     return HttpResponse(phone)
+
+
+##########################cookie#############################
+"""
+1. cookie 是保存 在 浏览器端的!!!!
+2. cookie 是服务器生成,设置的!!!!
+3. cookie 的数据是 key-value 形式的
+4. cookie 是基于域名的(访问这个网址设置的cookie,只有这个网址能获取).
+    当我们在浏览器中,访问这个域名的时候,浏览器会携带所有cookie
+
+模拟一个场景,模拟登录, 我们登录的时候传递用户名
+服务器把用户名保存在cookie中
+
+1. 看到效果
+2. 深入理解这个流程
+"""
+def tieba_login(request):
+
+    # 0. 获取用户名
+    username=request.GET.get('username')
+
+    response = HttpResponse('set_cookie')
+
+    # 1.设置cookie 是调用 response 实例对象的 set_cookie 方法
+    response.set_cookie(key='username', value=username)
+
+    return response

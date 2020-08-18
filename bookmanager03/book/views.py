@@ -303,3 +303,34 @@ def get_cookie(request):
     # {'user_id': '123', 'phono': 'http://www.baidu.com'}
     # 字典数据
     return HttpResponse(username)
+
+
+"""
+1. session 是保存在服务器端
+2. 默认保存在 数据库中
+3. 我们的session依赖于cookie技术
+    
+        当我们第一次 设置session的时候,我们的数据不仅会保存在数据库中,
+        还是生成一个 session_key.这个session_key 会设置到cookie中
+        我们的浏览器接收到这个cookie,会保存
+        
+        我们第二次及其之后的请求,都会携带这个cookie,这个时候我们读取session
+        信息的时候,就是凭借这个cookie信息来验证的
+4. 我们一般采用session技术实现状态保持
+    一般我们会在 登录之后,设置session.
+"""
+
+def set_session(request):
+
+    # 1. 设置session
+    request.session['user_id']=123
+
+    return HttpResponse('set_session')
+
+def get_session(request):
+
+    # 1. 获取session
+    user_id=request.session['user_id']
+    # user_id=request.session.get('user_id')
+    # User.objects.get(id=user_id)
+    return HttpResponse(user_id)

@@ -53,5 +53,9 @@ urlpatterns = [
     path('login/',views.tieba_login),
     path('get_cookie/',views.get_cookie),
 
+    # 设置session
+    path('set_session/',views.set_session),
+    path('get_session/',views.get_session),
+
 
 ]

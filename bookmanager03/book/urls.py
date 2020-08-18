@@ -57,5 +57,11 @@ urlpatterns = [
     path('set_session/',views.set_session),
     path('get_session/',views.get_session),
 
+    ###################################
+    path('jd_register/',views.jd_register),
 
+    # 类视图的路由
+    # path 的参数1  路由
+    # path 的参数2  视图函数名
+    path('meiduo_register/',views.RegisterView.as_view()),
 ]

@@ -351,3 +351,52 @@ def get_session(request):
     # request.session.flush()
 
     return HttpResponse(user_id)
+
+#####################################
+# 视图函数 既可以 get也可以post
+def jd_register(request):
+
+    # GET
+    # POST
+    print(request.method)
+    if request.method == 'GET':
+        return HttpResponse('get')
+    elif request.method == 'POST':
+        return HttpResponse('post')
+    else:
+        return HttpResponse('other')
+
+    return HttpResponse('jd_register')
+
+
+####################定义类视图#############################
+
+# class 类名(父类):
+#     属性
+#     方法
+from django.views import View
+class RegisterView(View):
+
+    # 我们用GET方式 请求的
+    def get(self,request):
+
+        return HttpResponse('view get')
+
+    # 我们用POST方式,请求的
+    def post(self,request):
+
+        return HttpResponse('view post')
+
+
+
+
+
+
+
+
+
+
+
+
+
+

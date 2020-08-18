@@ -323,14 +323,31 @@ def get_cookie(request):
 def set_session(request):
 
     # 1. 设置session
-    request.session['user_id']=123
+    request.session['user_id']=1234567890
+    # 删除某一个数据
+    # del  request.session[key]
+
+    # 如果value是一个整数，session将在value秒没有活动后过期。
+    # 如果value为0，那么用户session的Cookie将在用户的浏览器关闭时过期。
+    # 如果value为None，那么session有效期将采用系统默认值， 默认为两周
+    request.session.set_expiry(None)
 
     return HttpResponse('set_session')
 
 def get_session(request):
 
     # 1. 获取session
-    user_id=request.session['user_id']
-    # user_id=request.session.get('user_id')
+    # user_id=request.session['user_id']
+    # get 不容易异常
+    user_id=request.session.get('user_id')
     # User.objects.get(id=user_id)
+
+    # 2. 删除session数据.
+    # 只是删除session内容,key保留
+    # request.session.clear()
+
+    # 3. 删除session的数据,同时把sesion的key也删除
+    # 从数据库里删除数据了
+    # request.session.flush()
+
     return HttpResponse(user_id)

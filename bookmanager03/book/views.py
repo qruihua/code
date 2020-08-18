@@ -253,3 +253,9 @@ def baidu_tieba(request,tieba_id):
 
 
     return HttpResponse(tieba_id)
+
+
+def tieba_register(request,phone):
+
+
+    return HttpResponse(phone)

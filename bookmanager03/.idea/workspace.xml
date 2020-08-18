@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7921f2cb-986b-47f6-8fc0-3e150c6e418b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/views.py" afterDir="false" />
     </list>
@@ -16,7 +15,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44082606">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -31,8 +30,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/book/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="161">
-                  <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+                <state relative-caret-position="175">
+                  <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                   </folding>
@@ -43,8 +42,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$USER_HOME$/.virtualenvs/py3_django_40/lib/python3.6/site-packages/django/urls/converters.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="108">
-                  <caret line="42" column="15" lean-forward="true" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="15" />
+                <state relative-caret-position="136">
+                  <caret line="54" column="43" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="43" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
                   </folding>
@@ -55,8 +54,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/book/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="66">
-                  <caret line="39" column="26" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="26" />
+                <state relative-caret-position="233">
+                  <caret line="257" column="5" lean-forward="true" selection-start-line="257" selection-start-column="5" selection-end-line="260" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#36#0" expanded="true" />
                   </folding>
@@ -67,40 +66,20 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="vertical" split-proportion="0.5">
-          <split-first>
-            <leaf>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$USER_HOME$/.virtualenvs/py3_django_40/lib/python3.6/site-packages/django/urls/converters.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="18">
-                      <caret line="43" column="20" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="20" />
-                      <folding>
-                        <element signature="e#0#11#0" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-first>
-          <split-second>
-            <leaf>
-              <file pinned="false" current-in-tab="true">
-                <entry file="file://$USER_HOME$/.virtualenvs/py3_django_40/lib/python3.6/site-packages/django/urls/converters.py">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="90">
-                      <caret line="5" column="20" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="20" />
-                      <folding>
-                        <element signature="e#0#11#0" expanded="true" />
-                      </folding>
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-            </leaf>
-          </split-second>
-        </splitter>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/book/urls.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="247">
+                  <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+                  <folding>
+                    <element signature="e#0#28#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
       </split-second>
     </splitter>
   </component>
@@ -214,12 +193,12 @@
       <option name="presentableId" value="Default" />
       <updated>1597627039246</updated>
       <workItem from="1597627046051" duration="17005000" />
-      <workItem from="1597713638285" duration="1126000" />
+      <workItem from="1597713638285" duration="2315000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18131000" />
+    <option name="totallyTimeSpent" value="19320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="25" width="1311" height="645" extended-state="6" />
@@ -307,30 +286,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="39" column="26" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/py3_django_40/lib/python3.6/site-packages/django/urls/converters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="42" column="15" lean-forward="true" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="15" />
+        <state relative-caret-position="136">
+          <caret line="54" column="43" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="43" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/book/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="257" column="5" lean-forward="true" selection-start-line="257" selection-start-column="5" selection-end-line="260" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/book/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="175">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>

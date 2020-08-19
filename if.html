@@ -18,6 +18,15 @@
 	<span v-else-if="level === 2">国舅爷</span>
 	<span v-else-if="level === 3">国戚</span>
 	<span v-else>大臣</span>
+	<hr>
+	<span v-show="isShow">v-show</span>
+
+	<hr>
+	v-if 和 v-show 的区别
+
+	<span v-if="isShow" id="if">v-if 中的绑定的变量如果为false 是不会在document中.只有绑定的变量为true才会存在</span>
+	<span v-show="isShow" id="show">v-show 中的绑定的变量 不管是true 还是false 都会在 document中</span>
+
 </div>
 </body>
 <script type="text/javascript">

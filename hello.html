@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- 第一步,先导入vuejs -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<!-- 第二步 定义一个div标签  设置一下它的id值-->
+<div id="app">
+	<!-- 在这里 写vue代码 -->
+	{{message}}
+</div>
+
+</body>
+<!-- 第三步, 创建vue实例, 让vue实例 接管 div标签 -->
+<script type="text/javascript">
+	// var 变量 
+	// app 变量名
+	// new Vue() 创建vue实例
+	var app = new Vue({
+		el: '#app',		// el 表示 element 元素. 就是 查找到 body中我们接管的html
+		data: {		    // data 变量/数据
+			message: 'Hello Vue'		// message 变量名, '' 数据
+		}
+	})
+</script>
+</html>

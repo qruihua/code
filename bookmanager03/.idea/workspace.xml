@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7921f2cb-986b-47f6-8fc0-3e150c6e418b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/book/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/middleware.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookmanager03/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookmanager03/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="7921f2cb-986b-47f6-8fc0-3e150c6e418b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +85,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="74" />
     <option name="y" value="142" />
     <option name="width" value="983" />
@@ -176,15 +173,15 @@
       <option name="presentableId" value="Default" />
       <updated>1597627039246</updated>
       <workItem from="1597627046051" duration="17005000" />
-      <workItem from="1597713638285" duration="21784000" />
+      <workItem from="1597713638285" duration="22230000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38789000" />
+    <option name="totallyTimeSpent" value="39235000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="25" width="1311" height="645" extended-state="6" />
+    <frame x="51" y="25" width="1311" height="645" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25099286" />

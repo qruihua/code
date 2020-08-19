@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- 第一步,先导入vuejs -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+	{{message}}
+	<ul>
+		<li v-for="(item,index) in news">{{index+1}}.{{item}}</li>
+	</ul>
+	<hr>
+	<ul>
+		<li v-for="(value, key) in person">{{value}} -- {{key}}</li>
+	</ul>
+	<hr>
+	<ul>
+		<li v-for="friend in friends">{{friend.name}}--{{friend.address}}</li>
+	</ul>
+</div>
+</body>
+<script type="text/javascript">
+	var app = new Vue({
+		el: "#app",
+		data: {
+			message: 'hello',
+			news: ['老人被狗绳绊倒','需要不需要冷静','玛丽总统'],
+			person: {
+				name: '阿三',
+				address: '印度',
+				like: '手抓饭'
+			},
+			friends: [
+			{
+				name: 'Tom',
+				address: '美国',
+				like: 'computer'
+			},
+			{
+				name: 'Rose',
+				address: '日本',
+				like: '烤串'
+			}
+			]
+		}
+	})
+</script>
+</html>

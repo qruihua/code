@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- 第一步,先导入vuejs -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<!-- {{message}} -->
+	<input type="text" name="todo" v-model="todo"> 
+	<button v-on:click="show">添加</button>
+	<hr>
+	<ul>
+		<li v-for="item in todos">{{item}}</li>
+	</ul>
+</div>
+</body>
+<script type="text/javascript">
+	var app = new Vue({
+		el: '#app',
+		data: {
+			message: 'hello',
+			todo: '',			// 变量 记住要做的内容 绑定 input的数据
+			todos: []			// 列表记录我们添加的所有todo
+		},
+		methods: {
+			// 添加点击时间
+			show: function(){
+				// alert(this.todo)
+				// push 是把 数据 添加到列表中
+				this.todos.push(this.todo)
+				// alert(this.todos)
+			}
+		}
+	})
+</script>
+</html>

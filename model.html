@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- 第一步,先导入vuejs -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+	{{message}}
+	<table border="1">
+		<tr>
+			<td>用户名</td>
+			<td><input type="text" name="username" v-model="username"></td>
+		</tr>
+		<tr>
+			<td>密码</td>
+			<td><input type="password" name="password" v-model="password"></td>
+		</tr>
+		<tr>
+			<td>性别</td>
+			<td>
+				男	<input type="radio" name="sex" value="男" v-model="gender">
+				女  <input type="radio" name="sex" value="女" v-model="gender">
+			</td>
+		</tr>
+		<tr>
+			<td>爱好</td>
+			<td>
+				画画	<input type="checkbox" name="like" value="画画" v-model="like">
+				拍照 <input type="checkbox" name="like" value="拍照" v-model="like">
+				篮球 <input type="checkbox" name="like" value="篮球" v-model="like">
+			</td>
+		</tr>
+		<tr>
+			<td>所在城市</td>
+			<td>
+				<select name="city" v-model="city">
+					<option value="北京">北京</option>
+					<option value="上海">上海</option>
+					<option value="广州">广州</option>
+					<option value="深圳">深圳</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>个人简介</td>
+			<td>
+				<textarea name="desc" v-model="desc"></textarea>
+			</td>
+		</tr>
+	</table>
+	<button @click="showMessage">提交</button>
+</div>
+</body>
+<script type="text/javascript">
+	var vm = new Vue({
+		el: '#app',
+		data: {
+			message: 'hello',
+			username: '',
+			password: '',
+			gender: '',
+			like: [],
+			city: '',
+			desc: ''
+		},
+		methods: {
+			showMessage: function(){
+				// this.username 可以获取 data中 username的数据
+				alert(this.username+this.password+this.gender+this.like+this.city+this.desc)
+			}
+		}
+	})
+</script>
+</html>

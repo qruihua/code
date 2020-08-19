@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'book',
 ]
-
+# 中间件 -- 你做一个件事情的同时,会触发其他的事情
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -49,6 +49,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #一定要注册中间件
+    'book.middleware.Test1MiddleWare',
 ]
 
 ROOT_URLCONF = 'bookmanager03.urls'

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- 第一步,先导入vuejs -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<a href="">{{username}}</a>
+	<hr>
+	<!-- <a href="[[home]]">[[username]]</a>  错误写法-->
+	<a v-bind:href="home">[[username]]</a>
+	<hr>
+	<a :href="baidu">百度</a>
+</div>
+</body>
+<script type="text/javascript">
+	var vm = new Vue({
+		el: '#app',
+		delimiters: ["[[","]]"],
+		data: {
+			username: 'laowang',
+			home: 'http://www.itcast.cn',
+			baidu: 'http://www.baidu.com'
+		}
+	})
+</script>
+</html>
